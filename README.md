@@ -8,7 +8,7 @@ But I can't say Ralph really clicked for me when he first shared the idea this s
 
 [@mattpocockuk](https://x.com/mattpocockuk/status/2008200878633931247) and [@ryancarson](https://x.com/ryancarson/status/2008548371712135632)'s overviews helped a lot - right until Geoff came in and [said 'nah'](https://x.com/GeoffreyHuntley/status/2008731415312236984).
 
-![nah.png](nah.png)
+![nah.png](references/nah.png)
 
 _So what is the optimal way to Ralph?_
 
