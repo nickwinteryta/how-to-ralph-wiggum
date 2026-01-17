@@ -410,12 +410,12 @@ _Notes:_
 - Current subagents names presume using Claude.
 
 ```
-0a. Study `specs/*` with up to 250 parallel Sonnet subagents to learn the application specifications.
+0a. Study `specs/*` with up to 2 parallel Sonnet subagents to learn the application specifications.
 0b. Study @IMPLEMENTATION_PLAN.md (if present) to understand the plan so far.
-0c. Study `src/lib/*` with up to 250 parallel Sonnet subagents to understand shared utilities & components.
+0c. Study `src/lib/*` with up to 2 parallel Sonnet subagents to understand shared utilities & components.
 0d. For reference, the application source code is in `src/*`.
 
-1. Study @IMPLEMENTATION_PLAN.md (if present; it may be incorrect) and use up to 500 Sonnet subagents to study existing source code in `src/*` and compare it against `specs/*`. Use an Opus subagent to analyze findings, prioritize tasks, and create/update @IMPLEMENTATION_PLAN.md as a bullet point list sorted in priority of items yet to be implemented. Ultrathink. Consider searching for TODO, minimal implementations, placeholders, skipped/flaky tests, and inconsistent patterns. Study @IMPLEMENTATION_PLAN.md to determine starting point for research and keep it up to date with items considered complete/incomplete using subagents.
+1. Study @IMPLEMENTATION_PLAN.md (if present; it may be incorrect) and use up to 5 Sonnet subagents to study existing source code in `src/*` and compare it against `specs/*`. Use an Opus subagent to analyze findings, prioritize tasks, and create/update @IMPLEMENTATION_PLAN.md as a bullet point list sorted in priority of items yet to be implemented. Ultrathink. Consider searching for TODO, minimal implementations, placeholders, skipped/flaky tests, and inconsistent patterns. Study @IMPLEMENTATION_PLAN.md to determine starting point for research and keep it up to date with items considered complete/incomplete using subagents.
 
 IMPORTANT: Plan only. Do NOT implement anything. Do NOT assume functionality is missing; confirm with code search first. Treat `src/lib` as the project's standard library for shared utilities and components. Prefer consolidated, idiomatic implementations there over ad-hoc copies.
 
@@ -427,11 +427,11 @@ ULTIMATE GOAL: We want to achieve [project-specific goal]. Consider missing elem
 _Note:_ Current subagents names presume using Claude.
 
 ```
-0a. Study `specs/*` with up to 500 parallel Sonnet subagents to learn the application specifications.
+0a. Study `specs/*` with up to 5 parallel Sonnet subagents to learn the application specifications.
 0b. Study @IMPLEMENTATION_PLAN.md.
 0c. For reference, the application source code is in `src/*`.
 
-1. Your task is to implement functionality per the specifications using parallel subagents. Follow @IMPLEMENTATION_PLAN.md and choose the most important item to address. Before making changes, search the codebase (don't assume not implemented) using Sonnet subagents. You may use up to 500 parallel Sonnet subagents for searches/reads and only 1 Sonnet subagent for build/tests. Use Opus subagents when complex reasoning is needed (debugging, architectural decisions).
+1. Your task is to implement functionality per the specifications using parallel subagents. Follow @IMPLEMENTATION_PLAN.md and choose the most important item to address. Before making changes, search the codebase (don't assume not implemented) using Sonnet subagents. You may use up to 5 parallel Sonnet subagents for searches/reads and only 1 Sonnet subagent for build/tests. Use Opus subagents when complex reasoning is needed (debugging, architectural decisions).
 2. After implementing functionality or resolving problems, run the tests for that unit of code that was improved. If functionality is missing then it's your job to add it as per the application specifications. Ultrathink.
 3. When you discover issues, immediately update @IMPLEMENTATION_PLAN.md with your findings using a subagent. When resolved, update and remove the item.
 4. When the tests pass, update @IMPLEMENTATION_PLAN.md, then `git add -A` then `git commit` with a message describing the changes. After the commit, `git push`.
@@ -1023,12 +1023,12 @@ done
 _Note:_ Identical to `PROMPT_plan.md` but with scoping instructions and `WORK_SCOPE` env var substituted (automatically by the loop script).
 
 ```
-0a. Study `specs/*` with up to 250 parallel Sonnet subagents to learn the application specifications.
+0a. Study `specs/*` with up to 2 parallel Sonnet subagents to learn the application specifications.
 0b. Study @IMPLEMENTATION_PLAN.md (if present) to understand the plan so far.
-0c. Study `src/lib/*` with up to 250 parallel Sonnet subagents to understand shared utilities & components.
+0c. Study `src/lib/*` with up to 2 parallel Sonnet subagents to understand shared utilities & components.
 0d. For reference, the application source code is in `src/*`.
 
-1. You are creating a SCOPED implementation plan for work: "${WORK_SCOPE}". Study @IMPLEMENTATION_PLAN.md (if present; it may be incorrect) and use up to 500 Sonnet subagents to study existing source code in `src/*` and compare it against `specs/*`. Use an Opus subagent to analyze findings, prioritize tasks, and create/update @IMPLEMENTATION_PLAN.md as a bullet point list sorted in priority of items yet to be implemented. Ultrathink. Consider searching for TODO, minimal implementations, placeholders, skipped/flaky tests, and inconsistent patterns. Study @IMPLEMENTATION_PLAN.md to determine starting point for research and keep it up to date with items considered complete/incomplete using subagents.
+1. You are creating a SCOPED implementation plan for work: "${WORK_SCOPE}". Study @IMPLEMENTATION_PLAN.md (if present; it may be incorrect) and use up to 5 Sonnet subagents to study existing source code in `src/*` and compare it against `specs/*`. Use an Opus subagent to analyze findings, prioritize tasks, and create/update @IMPLEMENTATION_PLAN.md as a bullet point list sorted in priority of items yet to be implemented. Ultrathink. Consider searching for TODO, minimal implementations, placeholders, skipped/flaky tests, and inconsistent patterns. Study @IMPLEMENTATION_PLAN.md to determine starting point for research and keep it up to date with items considered complete/incomplete using subagents.
 
 IMPORTANT: This is SCOPED PLANNING for "${WORK_SCOPE}" only. Create a plan containing ONLY tasks directly related to this work scope. Be conservative - if uncertain whether a task belongs to this work, exclude it. The plan can be regenerated if too narrow. Plan only. Do NOT implement anything. Do NOT assume functionality is missing; confirm with code search first. Treat `src/lib` as the project's standard library for shared utilities and components. Prefer consolidated, idiomatic implementations there over ad-hoc copies.
 
@@ -1193,14 +1193,14 @@ _Notes:_
 
 ```
 0a. Study @AUDIENCE_JTBD.md to understand who we're building for and their Jobs to Be Done.
-0b. Study `specs/*` with up to 250 parallel Sonnet subagents to learn JTBD activities.
+0b. Study `specs/*` with up to 2 parallel Sonnet subagents to learn JTBD activities.
 0c. Study @IMPLEMENTATION_PLAN.md (if present) to understand the plan so far.
-0d. Study `src/lib/*` with up to 250 parallel Sonnet subagents to understand shared utilities & components.
+0d. Study `src/lib/*` with up to 2 parallel Sonnet subagents to understand shared utilities & components.
 0e. For reference, the application source code is in `src/*`.
 
 1. Sequence the activities in `specs/*` into a user journey map for the audience in @AUDIENCE_JTBD.md. Consider how activities flow into each other and what dependencies exist.
 
-2. Determine the next SLC release. Use up to 500 Sonnet subagents to compare `src/*` against `specs/*`. Use an Opus subagent to analyze findings. Ultrathink. Given what's already implemented recommend which activities (at what capability depths) form the most valuable next release. Prefer thin horizontal slices - the narrowest scope that still delivers real value. A good slice is Simple (narrow, achievable), Lovable (people want to use it), and Complete (fully accomplishes a meaningful job, not a broken preview).
+2. Determine the next SLC release. Use up to 5 Sonnet subagents to compare `src/*` against `specs/*`. Use an Opus subagent to analyze findings. Ultrathink. Given what's already implemented recommend which activities (at what capability depths) form the most valuable next release. Prefer thin horizontal slices - the narrowest scope that still delivers real value. A good slice is Simple (narrow, achievable), Lovable (people want to use it), and Complete (fully accomplishes a meaningful job, not a broken preview).
 
 3. Use an Opus subagent (ultrathink) to analyze and synthesize the findings, prioritize tasks, and create/update @IMPLEMENTATION_PLAN.md as a bullet point list sorted in priority of items yet to be implemented for the recommended SLC release. Begin plan with a summary of the recommended SLC release (what's included and why), then list prioritized tasks for that scope. Consider TODOs, placeholders, minimal implementations, skipped tests - but scoped to the release. Note discoveries outside scope as future work.
 
